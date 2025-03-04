@@ -26,6 +26,13 @@ app.post("/signup", async (req, res) => {
     return res.send(
       "Password length should be greater than 8 or less than or equal to 16"
     );
+
+    res.status(200).json({
+      Username,
+      Email,
+      Password,
+      DateOfBirth,
+    });
 });
 
 app.listen(PORT, () => {
